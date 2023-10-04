@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "05ce5eee-2f63-4b63-97a9-d2de9f43441f",
+		"name": "Listings API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21704095"
+	},
+	"item": [
+		{
+			"name": "Get all listings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/listings",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"listings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all drafts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/listings",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"listings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
