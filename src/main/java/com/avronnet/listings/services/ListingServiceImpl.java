@@ -3,6 +3,7 @@ package com.avronnet.listings.services;
 import com.avronnet.listings.persistance.models.Listing;
 import com.avronnet.listings.persistance.repositories.ListingsRepository;
 import com.google.common.collect.Lists;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.Optional;
 @Service
 public class ListingServiceImpl implements ListingService {
 
+    @Autowired
     private ListingsRepository listingsRepository;
 
     @Override

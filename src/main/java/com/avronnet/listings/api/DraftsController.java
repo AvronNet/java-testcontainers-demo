@@ -32,8 +32,8 @@ public class DraftsController {
     }
 
     @PostMapping
-    public Draft createDraft(@RequestBody Draft draft) {
-        return draftService.create(draft);
+    public ResponseEntity<Draft> createDraft(@RequestBody Draft draft) {
+        return new ResponseEntity<>(draftService.create(draft), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")

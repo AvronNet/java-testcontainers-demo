@@ -1,4 +1,4 @@
-package com.avronnet.listings.api;
+package com.avronnet.listings.services;
 
 import com.avronnet.listings.persistance.models.Draft;
 import com.avronnet.listings.persistance.repositories.DraftsRepository;

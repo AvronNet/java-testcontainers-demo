@@ -2,9 +2,9 @@ package com.avronnet.listings.services;
 
 import com.avronnet.listings.persistance.models.Draft;
 import com.avronnet.listings.persistance.repositories.DraftsRepository;
-import org.springframework.data.crossstore.ChangeSetPersister;
-import org.springframework.stereotype.Service;
 import com.google.common.collect.Lists;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -12,8 +12,8 @@ import java.util.Optional;
 
 @Service
 public class DraftServiceImpl implements DraftService {
+    @Autowired
     private DraftsRepository draftsRepository;
-
 
     @Override
     public Optional<Draft> findById(String id) {
