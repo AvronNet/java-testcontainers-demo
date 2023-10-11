@@ -1,4 +1,4 @@
-package com.avronnet.listings.api.pg;
+package com.avronnet.listings.api.testcontainers;
 
 import com.avronnet.listings.persistance.models.Listing;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -9,11 +9,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class PgListingsControllerTests extends PostgresTestBase {
+public class ListingsControllerTests extends TestcontainersTestBase {
 
     @Test
-    @DisplayName("Test findById Success")
-    void testFindById() throws JsonProcessingException {
+    @DisplayName("Test create listing - Success")
+    void createListing() throws JsonProcessingException {
 
         Listing listing = new Listing(null, "Listing Name", "Description");
         String createBody = objectMapper.writeValueAsString(listing);
