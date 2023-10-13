@@ -15,8 +15,8 @@ public class H2ListingsControllerTests extends H2TestBase {
     @DisplayName("Test findById Success")
     void testFindById() throws JsonProcessingException {
 
-        Listing draft = new Listing(null, "Listing Name", "Description");
-        String createBody = objectMapper.writeValueAsString(draft);
+        Listing listing = new Listing(null, "Listing Name", "Description");
+        String createBody = objectMapper.writeValueAsString(listing);
         ExtractableResponse<Response> response = RestAssured
                 .given()
                 .contentType("application/json")
@@ -29,10 +29,11 @@ public class H2ListingsControllerTests extends H2TestBase {
 
         // Execute the service call
         var responseBody = response.body().asString();
-        Listing returnedDraft = objectMapper.readValue(responseBody, Listing.class);
+        Listing returnedListing = objectMapper.readValue(responseBody, Listing.class);
 
         // Assert the response
-        Assertions.assertEquals(draft.getTitle(), returnedDraft.getTitle(), "Listing title returned was not as expected");
-        Assertions.assertEquals(draft.getDescription(), returnedDraft.getDescription(), "Listing description returned was not as expected");
+        Assertions.assertNotNull(returnedListing.getId(), "Created listing return data is missing ID");
+        Assertions.assertEquals(listing.getTitle(), returnedListing.getTitle(), "Listing title returned was not as expected");
+        Assertions.assertEquals(listing.getDescription(), returnedListing.getDescription(), "Listing description returned was not as expected");
     }
 }

@@ -6,7 +6,7 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
 
-@ActiveProfiles({"pg", "test"})
+@ActiveProfiles({"pg", "use-infobip-testcontainers"})
 public abstract class InfobipTestcontainersTestBase extends IntegrationTestBase {
 
 }
