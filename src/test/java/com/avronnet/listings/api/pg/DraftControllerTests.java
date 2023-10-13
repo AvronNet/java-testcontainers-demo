@@ -1,7 +1,6 @@
-package com.avronnet.listings.api;
+package com.avronnet.listings.api.pg;
 
 import com.avronnet.listings.IntegrationTestBase;
-import com.avronnet.listings.api.h2.H2TestBase;
 import com.avronnet.listings.persistance.models.Draft;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.restassured.RestAssured;
@@ -14,8 +13,8 @@ import org.junit.jupiter.api.Test;
 public class DraftControllerTests extends IntegrationTestBase {
 
     @Test
-    @DisplayName("Test findById Success")
-    void testFindById() throws JsonProcessingException {
+    @DisplayName("Create draft - Success")
+    void createDraftIT() throws JsonProcessingException {
 
         Draft draft = new Draft("randomID1", "Draft Name", "Description");
         String createBody = objectMapper.writeValueAsString(draft);

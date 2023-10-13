@@ -174,13 +174,13 @@
 				<dependency>
 					<groupId>com.infobip</groupId>
 					<artifactId>infobip-postgresql-testcontainers-spring-boot-starter</artifactId>
-					<version>4.0.3</version>
+					<version>4.2.0</version>
 					<scope>test</scope>
 				</dependency>
 				<dependency>
 					<groupId>com.infobip</groupId>
 					<artifactId>infobip-redis-testcontainers-spring-boot-starter</artifactId>
-					<version>4.0.3</version>
+					<version>4.2.0</version>
 					<scope>test</scope>
 				</dependency>
 			</dependencies>
@@ -204,12 +204,12 @@
 				<dependency>
 					<groupId>com.infobip</groupId>
 					<artifactId>infobip-postgresql-testcontainers-spring-boot-starter</artifactId>
-					<version>4.0.3</version>
+					<version>4.2.0</version>
 				</dependency>
 				<dependency>
 					<groupId>com.infobip</groupId>
 					<artifactId>infobip-redis-testcontainers-spring-boot-starter</artifactId>
-					<version>4.0.3</version>
+					<version>4.2.0</version>
 				</dependency>
 			</dependencies>
 		</profile>

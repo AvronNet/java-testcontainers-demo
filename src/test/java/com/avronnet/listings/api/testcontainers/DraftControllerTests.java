@@ -13,7 +13,7 @@ public class DraftControllerTests extends TestcontainersTestBase {
 
     @Test
     @DisplayName("Create draft - Success")
-    void testFindById() throws JsonProcessingException {
+    void createDraftIT() throws JsonProcessingException {
 
         Draft draft = new Draft("testcontainerId1", "Draft Name", "Description");
         String createBody = objectMapper.writeValueAsString(draft);

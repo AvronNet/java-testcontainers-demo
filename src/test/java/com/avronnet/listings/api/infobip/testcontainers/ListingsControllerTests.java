@@ -13,7 +13,7 @@ public class ListingsControllerTests extends InfobipTestcontainersTestBase {
 
     @Test
     @DisplayName("Test create listing - Success")
-    void createListing() throws JsonProcessingException {
+    void createListingIT() throws JsonProcessingException {
 
         Listing listing = new Listing(null, "Listing Name", "Description");
         String createBody = objectMapper.writeValueAsString(listing);
